@@ -64,11 +64,9 @@ function ui(data) {
       clone.querySelector('.js-delete-button').classList.add('hidden');
       clone.querySelector('.js-edit-button').classList.add('hidden');
 
-      // document.getElementsByClassName('js-add-button').classList.add('hidden');
     } else {
       clone.querySelector('.js-delete-button').classList.remove('hidden');
       clone.querySelector('.js-edit-button').classList.remove('hidden');
-      // document.getElementsByClassName('js-add-button').classList.remove('hidden');
     }
 
     clone.querySelector('.js-delete-button').id = element.id;
