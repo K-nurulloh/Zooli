@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign</title>
+    <link rel="stylesheet" href="./js/login.js" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="../css/output.css" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Zoo " />
+    <link rel="manifest" href="/site.webmanifest" />
+  </head>
+  <body>
+    <section class="fixed top-5 right-5 gap-4" id="toastConteiner"></section>
+
+    <section class="bg-gray-50 dark:bg-gray-900">
+      <div
+        class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        <div
+          class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+          <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+            <h1
+              class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+              Sign Up
+            </h1>
+
+            <form id="loginForm" class="space-y-4 md:space-y-6" action="#">
+              <div>
+                <label
+                  for="text"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Login</label
+                >
+                <input
+                  type="text"
+                  name="username"
+                  id="email"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="login" 
+                  required/>
+                  
+              </div>
+
+              <div>
+                <label
+                  for="password"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="••••••••"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                  required/>
+              </div>
+
+                <div>
+                <label
+                  for="Namber"
+                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >Namber</label
+                >
+                <input
+                  type="Namber"
+                  name="Namber"
+                  id="Namber"
+                  placeholder="Namber"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                  required/>
+              </div>
+              <button
+                type="submit"
+                class="text-white js-submit-btn bg-brand box-border border border-transparent hover:bg-brand-strong focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 w-full rounded-base text-sm px-4 py-2.5 focus:outline-none">
+                Sign up
+              </button>
+
+              <p class="text-sm font-light pl-2 text-gray-500 dark:text-gray-400">
+                 >
+                <a
+                  href="./login.html"
+                  class="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                  >Sign in</a
+                >
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    <template id="toast-warning">
+      <div
+        id="toast-warning"
+        class="flex items-center w-full max-w-sm p-4 text-body bg-neutral-primary-soft rounded-base shadow-xs border border-default"
+        role="alert">
+        <div
+          class="inline-flex items-center justify-center shrink-0 w-7 h-7 text-fg-warning bg-warning-soft rounded">
+          <svg
+            class="w-5 h-5"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24">
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 13V8m0 8h.01M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+          </svg>
+          <span class="sr-only">icon</span>
+        </div>
+        <div class="ms-3 text-sm font-normal js-toast"></div>
+      </div>
+    </template>
+    <script type="module" src="../js/sign.js"></script>
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+  </body>
+</html>
