@@ -2148,6 +2148,10 @@
       font-size: 0.875rem;
     }
   }
+  .leading-4 {
+    --tw-leading: var(--leading-4);
+    line-height: var(--leading-4);
+  }
   .leading-5 {
     --tw-leading: var(--leading-5);
     line-height: var(--leading-5);
