@@ -4,7 +4,7 @@ const elSubmitButton = document.getElementById('submitButton');
 function add(newTodos) {
   const token = localStorage.getItem('token');
 
-  fetch('http://localhost:3000/api/animals/', {
+  fetch('https://json-api.uz/api/project/game-over/animals/', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -14,7 +14,7 @@ function add(newTodos) {
   })
     .then((res) => res.json())
     .then((res) => {
-      location.href = '/index.html';
+      location.href = './index.html';
     })
     .catch(() => {})
     .finally(() => {});

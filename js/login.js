@@ -27,7 +27,13 @@ elLoginForm.addEventListener("submit", (evt) => {
 });
 
 function login(data) {
-  fetch("http://localhost:3000/users")
+  const token = localStorage.getItem("token");
+  fetch("https://json-api.uz/api/project/game-over/animals", {
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer " + token,
+    },
+  })
     .then((res) => {
       return res.json();
     })
@@ -35,7 +41,7 @@ function login(data) {
       elSubmitBtn.disabled = false;
       elSubmitBtn.innerHTML = "Sign in";
       localStorage.setItem("token", res.access_token);
-      location.href = "./index.html";
+      location.href = "../index.html";
     })
     .catch(() => {
       elSubmitBtn.disabled = false;

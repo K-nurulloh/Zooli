@@ -36,7 +36,7 @@ elLoginForm.addEventListener("submit", (evt) => {
 });
 
 function login(data) {
-  fetch("http://localhost:3000/users", {
+  fetch("https://json-api.uz/api/project/game-over/animals", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
@@ -49,13 +49,13 @@ function login(data) {
       elSubmitBtn.innerHTML = "Sign in";
       localStorage.clear("token");
 
-      location.href = "./login.html";
+      location.href = "../login/login.html";
     })
     .catch(() => {
       const clone = eltoastWarning.cloneNode(true).content;
       elSubmitBtn.disabled = false;
       elSubmitBtn.innerHTML = "Sign in";
-      clone.querySelector(".js-toast").innerText = "Parol Yoki Login Yoki Nember XATO";
+      clone.querySelector(".js-toast").innerText = "Parol Yoki Login XATO";
       eltoastConteiner.append(clone);
     });
 }

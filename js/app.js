@@ -26,7 +26,7 @@ AOS.init({
   once: true,
 });
 
-fetch('http://localhost:3000/api/animals')
+fetch('https://json-api.uz/api/project/game-over/animals')
   .then((res) => res.json())
   .then((res) => {
     ui(res.data);
@@ -129,7 +129,7 @@ function loader(bool) {
 
 function deleteCard(id) {
   const token = localStorage.getItem('token');
-  fetch('http://localhost:3000/api/animals/' + id, {
+  fetch('https://json-api.uz/api/project/game-over/animals/' + id, {
     method: 'DELETE',
     headers: {
       Authorization: 'Bearer ' + token,
