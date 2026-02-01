@@ -40,18 +40,15 @@ fetch('https://json-api.uz/api/project/game-over/animals')
     loader(false);
   });
 
-// ui
-
+  
 function ui(data) {
   data.forEach((element) => {
     const clone = elCardTemplate.cloneNode(true).content;
 
     const cardName = clone.getElementById('name');
-    const cardCategory = clone.getElementById('category');
     const cardSpeed = clone.getElementById('speed');
     const cardYear = clone.getElementById('year');
     const cardColor = clone.getElementById('color');
-    const cardHabitat = clone.getElementById('habitat');
 
     cardName.innerText = element.name ? element.name : 'No data';
     cardCategory.innerText = element.category ? element.category : 'No data';
@@ -151,11 +148,9 @@ function deleteCard(id) {
     });
 }
 
-// Edit
 
 function editCard(id) {}
 
-// login
 
 function isLogin() {
   if (localStorage.getItem('token') === null) {
@@ -165,7 +160,6 @@ function isLogin() {
   }
 }
 
-// Exit
 
 elExitBtn.addEventListener('click', () => {
   localStorage.removeItem('token');
